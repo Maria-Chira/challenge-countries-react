@@ -1,38 +1,68 @@
-.App {
+body{
+  background-color: black;
+  color: white;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.MainHeading{
   text-align: center;
+  text-shadow: 2px 2px 2px white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.CardContainer{
+  background-color: rgb(46, 44, 44);
+  width: 25%;
+  margin:30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-shadow: 4px 4px 7px rgb(122, 118, 118);
+}
+
+.ImageFlag{
+  width:100%;
+  height:200px;
+  object-fit: cover;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.AllCountriesContainer{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.CountryDetails{
+  padding: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+span{
+  color: yellow;
+}
+
+
+/* ---------------Media Queries--------------------- */
+@media only screen and (max-width: 830px) {
+  .CardContainer{
+    width: 40%;
   }
-  to {
-    transform: rotate(360deg);
+  .CountryDetails{
+  padding: 20px;
+}
+}
+
+@media only screen and (max-width:600px) {
+  .CardContainer{
+    width: 70%;
   }
+  .AllCountriesContainer{
+  justify-content: center;
+}
 }
